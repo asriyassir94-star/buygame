@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BUYGAME | Ultimate Gaming Store</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #080b16;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 7%;
+  background: #10172a;
+  border-bottom: 1px solid #24304a;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 900;
+  color: #00e5ff;
+}
+
+.logo span { color: white; }
+
+nav {
+  display: flex;
+  gap: 22px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  transition: .3s;
+}
+
+nav a:hover { color: #00e5ff; }
+
+.hero {
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+  background:
+  radial-gradient(circle at center, #123c63, #080b16 70%);
+}
+
+.hero h1 {
+  font-size: clamp(35px, 7vw, 65px);
+  margin-bottom: 20px;
+}
+
+.hero h1 span { color: #00e5ff; }
+
+.hero p {
+  color: #b6c5da;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: #00d9f5;
+  color: #06101c;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: white;
+  transform: scale(1.05);
+}
+
+section { padding: 65px 7%; }
+
+.heading {
+  font-size: 32px;
+  margin-bottom: 35px;
+}
+
+.heading span { color: #00e5ff; }
+
+.games {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #131d32;
+  border: 1px solid #273651;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: #00e5ff;
+  box-shadow: 0 10px 30px #00e5ff20;
+}
+
+.card img {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+}
+
+.card-content { padding: 20px; }
+
+.card h3 {
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #a9b6cb;
+  font-size: 14px;
+}
+
+.price {
+  color: #00e5ff;
+  font-size: 23px;
+  font-weight: bold;
+  margin: 18px 0;
+}
+
+.card button { width: 100%; }
+
+.about {
+  text-align: center;
+  background: #10172a;
+}
+
+.about p {
+  max-width: 650px;
+  margin: auto;
+  color: #b6c5da;
+  line-height: 1.8;
+}
+
+.contact { text-align: center; }
+
+footer {
+  text-align: center;
+  background: #050811;
+  color: #8593a9;
+  padding: 30px;
+}
+
+@media(max-width:600px) {
+  header { padding: 18px 4%; }
+  .logo { font-size: 23px; }
+  nav { gap: 10px; }
+  nav a { font-size: 12px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">BUY<span>GAME</span></div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#games">Games</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<main>
+
+<div class="hero" id="home">
+  <h1>LEVEL UP YOUR <span>GAMING</span></h1>
+  <p>Discover your next favorite game at BUYGAME.</p>
+  <a href="#games" class="btn">EXPLORE GAMES</a>
+</div>
+
+<section id="games">
+  <h2 class="heading">POPULAR <span>GAMES</span></h2>
+
+  <div class="games">
+
+    <div class="card">
+      <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/730/header.jpg" alt="Counter Strike 2">
+      <div class="card-content">
+        <h3>Counter-Strike 2</h3>
+        <p>Competitive tactical FPS.</p>
+        <div class="price">FREE</div>
+        <button class="btn" onclick="showGame('Counter-Strike 2')">View Game</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/header.jpg" alt="Baldur's Gate 3">
+      <div class="card-content">
+        <h3>Baldur's Gate 3</h3>
+        <p>Explore an epic fantasy world.</p>
+        <div class="price">Explore</div>
+        <button class="btn" onclick="showGame('Baldurs Gate 3')">View Game</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg" alt="Cyberpunk 2077">
+      <div class="card-content">
+        <h3>Cyberpunk 2077</h3>
+        <p>Discover a futuristic world.</p>
+        <div class="price">Explore</div>
+        <button class="btn" onclick="showGame('Cyberpunk 2077')">View Game</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/271590/header.jpg" alt="GTA V">
+      <div class="card-content">
+        <h3>GTA V</h3>
+        <p>Explore Los Santos.</p>
+        <div class="price">Explore</div>
+        <button class="btn" onclick="showGame('GTA V')">View Game</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2 class="heading">ABOUT <span>BUYGAME</span></h2>
+  <p>
+    Welcome to BUYGAME, your gaming destination.
+    Discover popular games, explore new adventures
+    and enjoy an amazing gaming experience.
+  </p>
+</section>
+
+<section class="contact">
+  <h2 class="heading">READY TO <span>PLAY?</span></h2>
+  <p style="color:#a9b6cb;margin-bottom:25px">
+    Your next adventure starts here.
+  </p>
+  <a href="#games" class="btn">DISCOVER GAMES</a>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 BUYGAME. All Rights Reserved.</p>
+  <p style="margin-top:10px">Made for Gamers 🎮</p>
+</footer>
+
+<script>
+function showGame(name) {
+  alert("Welcome to BUYGAME! You selected: " + name);
+}
+</script>
+
+</body>
+  </html>
+  
